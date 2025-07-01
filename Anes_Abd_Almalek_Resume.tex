@@ -1,0 +1,163 @@
+\documentclass{article}
+
+% --- PACKAGES ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+\usepackage{multicol}
+\linespread{0.85}
+
+% --- SECTION HEADING ---
+\newcommand{\resumesection}[1]{
+  \vspace{1.2ex}
+  \noindent{\Large\textbf{\MakeUppercase{#1}}}
+  \vspace{0.4ex}
+  \hrule height 0.3pt
+  \vspace{0.8ex}
+}
+
+% --- ENTRY COMMANDS ---
+\newcommand{\resumeentry}[4]{
+  \item[] \textbf{#1} \hfill #2 \\
+  \textit{#3} \hfill #4 \\
+}
+
+\newcommand{\resumesubentry}[2]{
+  \item[] \textbf{#1} \\
+  \textit{#2} \\
+}
+
+% --- HYPERLINK COLORS ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=black,
+}
+
+\setlist{nosep, topsep=0pt, parsep=0pt, itemsep=0pt}
+
+% --- BEGIN DOCUMENT ---
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    \vspace{-1em}
+    {\Huge \textbf{Anes Abd Almalek}}\\
+    \small Constantine, Algeria \quad | \quad +213794972232 \quad | \quad
+    \href{mailto:anes.abdelmalek@univ-constantine2.dz}{anes.abdelmalek@univ-constantine2.dz} \quad | \quad
+    \href{https://github.com/GIt-BITu}{github.com/GIt-BITu}
+\end{center}
+
+% --- SUMMARY ---
+\resumesection{Summary}
+\justifying
+Self-taught software engineer with hands-on experience in full-stack development, automation, and AI.
+Delivered real-world solutions using Spring Boot, React, FastAPI, and Arduino. Passionate about solving
+practical problems, mentoring future tech leaders, and supporting developer communities through teaching 
+and hackathon leadership. Strong focus on scalable backend systems and intelligent automation.
+
+% --- TECHNICAL SKILLS ---
+\resumesection{Technical Skills}
+
+\raggedright
+\textbf{Languages:}\\
+Python, Java, Kotlin, JavaScript, C++, HTML/CSS, SQL, Bash
+
+\textbf{Frameworks/Tools:}\\
+Spring Boot, React, Django, Ktor, FastAPI, JavaFX, Selenium, Jetpack Compose, PostgreSQL, MySQL, Docker, Git,
+Linux, Hugging Face, Hibernate, JPA, Figma, \LaTeX, Vim, JUnit, PyUnit, GitHub, Microsoft Project, 
+Microsoft 365 Suite
+
+\textbf{Concepts:}\\
+REST APIs, OOP, Concurrency programming, Data Structures \& Algorithms, Networking, UML, Agile method, 
+PEP8, Code Maintainability, Functional Programming
+
+% --- SELECTED PROJECTS ---
+\resumesection{Selected Projects}
+\begin{itemize}[leftmargin=*,label={}]
+    \resumesubentry{Greenhouse IoT Monitoring System}{
+      Developed an IoT platform using Spring Boot, React, Hibernate, PostgreSQL, and Arduino to 
+      monitor temperature, humidity, and light. Enabled real-time data tracking for greenhouse environments.
+    }
+
+    \resumesubentry{Online Voting Platform}{
+      Full-stack web app built with Django and PostgreSQL for secure user login, candidate management,
+       and vote recording with robust access control.
+    }
+
+    \resumesubentry{General purpose Image Classifier with Hugging Face}{
+      Used ResNet-50 to classify general images and deployed it with FastAPI to provide fast,
+       scalable image classification and packaged the model inference into a JavaFX GUI, enabling offline desktop predictions.
+    }
+
+    \resumesubentry{Python Automation Tool}{
+      Automated downloading and organizing of 116 files from structured web archives using Selenium.
+       Resolved race conditions and validated file completion integrity.
+    }
+
+    \resumesubentry{Data Visualization Suite}{
+      Analyzed datasets (U.S. baby names, movie ratings) using pandas, matplotlib, and Jupyter 
+      to build interactive and insightful data visualizations.
+    }
+\end{itemize}
+
+% --- EXPERIENCE ---
+\resumesection{Experience}
+\begin{itemize}[leftmargin=*,label={}]
+    \resumeentry{Android Developer Intern}{Jan 2024 -- Aug 2024}{Maduo Studio}{Dubai, UAE}
+    \begin{itemize}[leftmargin=1.5em]
+        \item Designed Android UI/UX with Kotlin and Jetpack Compose for a fitness app.
+        \item Built a juice customization feature enabling users to select ingredients prepared 
+        by the gym’s restaurant.
+    \end{itemize}
+
+    \resumeentry{Robotics Teacher \& Coach}{Jun 2024 -- Present}{AljazarieROBOTICS}{Constantine, Algeria}
+    \begin{itemize}[leftmargin=1.5em]
+        \item Delivered Python and robotics training to youth participants
+        \item organized and mentored teams for Codeavour Algeria 
+        \item supported AI/programming initiatives with the Ministry of Youth and Sport for their staff.
+    \end{itemize}
+
+    \resumeentry{Developer Member}{Jan 2024 -- Present}{Google Developers Group}{Constantine, Algeria}
+    \begin{itemize}[leftmargin=1.5em]
+        \item Developed and reviewed web authentication features; contributed to local developer training 
+        events.
+    \end{itemize}
+\end{itemize}
+
+% --- LEADERSHIP & ACTIVITIES ---
+\resumesection{Leadership \& Activities}
+\begin{itemize}[leftmargin=*,label={}]
+    \resumeentry{Hackathon Mentor}{Nov 2023}{DevFest Constantine}{Constantine, Algeria}
+    \begin{itemize}[leftmargin=1.5em]
+        \item Mentored 7–9 teams (28–35 participants) in fintech app design during the DevFest Hackathon.
+        \item Handled technical setup and event logistics. Despite last-minute sponsor withdrawal, 
+        ensured successful closing with gifts and certificates.
+    \end{itemize}
+
+    \resumeentry{Contributor}{Feb 2023 -- Sep 2023}{Mozilla Campus Club}{Constantine, Algeria}
+    \begin{itemize}[leftmargin=1.5em]
+        \item Worked on Android, AI/ML, and cybersecurity initiatives. 
+        Supported content creation and team collaboration.
+    \end{itemize}
+\end{itemize}
+
+% --- EDUCATION ---
+\resumesection{Education}
+\begin{itemize}[leftmargin=*,label={}]
+    \resumeentry{Bachelor's in Software Engineering}{Jun 2025}{University of Constantine 2}{Constantine, Algeria}
+\end{itemize}
+
+% --- ACHIEVEMENTS ---
+\resumesection{Achievements}
+\begin{itemize}[leftmargin=*,label={}]
+    \item Coached winning team to 2nd Place track 02 – Codeavour Qatar (Junior Division), 2025
+    \item Hackathon Mentor – DevFest Constantine, 2025
+    \item Taught 40+ students and mentored 100+ across national robotics and AI workshops
+\end{itemize}
+
+\end{document}
