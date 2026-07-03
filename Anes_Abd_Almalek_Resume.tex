@@ -1,167 +1,164 @@
-\documentclass{article}
+\documentclass[10pt]{article}
 
 % --- PACKAGES ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage[a4paper,margin=0.48in,top=0.42in,bottom=0.42in,left=0.52in,right=0.52in]{geometry}
+\usepackage{lmodern}
+\usepackage{microtype}
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{ragged2e}
-\usepackage{multicol}
-\linespread{0.8}
+\usepackage{array}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1}
+\RaggedRight
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\raggedbottom
 
 % --- SECTION HEADING ---
-\newcommand{\resumesection}[1]{
-  \vspace{1.2ex}
-  \noindent{\Large\textbf{\MakeUppercase{#1}}}
-  \vspace{0.4ex}
-  \hrule height 0.3pt
-  \vspace{0.8ex}
+\newcommand{\resumesection}[1]{%
+  \vspace{1.0ex}
+  \noindent{\large\scshape #1}\par
+  \vspace{0.5ex}
+  \hrule height 0.35pt
+  \vspace{1.0ex}
 }
 
 % --- ENTRY COMMANDS ---
-\newcommand{\resumeentry}[4]{
-  \item[] \textbf{#1} \hfill #2 \\
-  \textit{#3} \hfill #4 \\
+\newcommand{\resumeentry}[4]{%
+  \item[]
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}p{0.78\textwidth}r}
+    {\textbf{#1}} & {#2} \\
+    {\textit{#3}} & {\textit{#4}} \\
+  \end{tabular*}
+  \vspace{-0.8ex}
 }
 
-\newcommand{\resumesubentry}[2]{
-  \item[] \textbf{#1} \\
+\newcommand{\resumesubentry}[2]{%
+  \item[] {\textbf{#1}} \\
   \textit{#2} \\
+  \vspace{-0.35ex}
 }
 
 % --- HYPERLINK COLORS ---
-\hypersetup{
+\hypersetup{%
     colorlinks=true,
     linkcolor=black,
     filecolor=black,
     urlcolor=black,
 }
 
-\setlist{nosep, topsep=0pt, parsep=0pt, itemsep=0pt}
+\setlist{nosep, topsep=0pt, parsep=0pt, itemsep=0pt, leftmargin=*, label={}}
 
 % --- BEGIN DOCUMENT ---
 \begin{document}
+\fontsize{9.2}{10.2}\selectfont
 
 % --- HEADER ---
 \begin{center}
-    \vspace{-1em}
-    {\Huge \textbf{Anes Abd Almalek}}\\
-    \small Constantine, Algeria \quad | \quad +213794972232 \quad | \quad
-    \href{mailto:anes.abdelmalek@univ-constantine2.dz}{anes.abdelmalek@univ-constantine2.dz} \quad | \quad
-    \href{https://github.com/GIt-BITu}{github.com/GIt-BITu}
+    \vspace{-1.1em}
+    {\LARGE \textbf{Anes Abd Almalek}}\\
+    \vspace{0.15ex}
+    {\small Constantine, Algeria}\\
+    \vspace{0.2ex}
+    {\small +213794972232 \;|\; \href{mailto:anes.abdelmalek@univ-constantine2.dz}{anes.abdelmalek@univ-constantine2.dz} \;|\; \href{https://github.com/GIt-BITu}{github.com/GIt-BITu}}
 \end{center}
-
-% --- SUMMARY ---
-\resumesection{Summary}
-\justifying
-Software engineering student with hands-on experience in full-stack development, automation, and AI.
-Delivered real-world solutions using Spring Boot, React, FastAPI, and Arduino. Passionate about solving
-practical problems, mentoring future tech leaders, and supporting developer communities through teaching 
-and hackathon leadership. Strong focus on scalable backend systems and intelligent automation.
-
-\resumesection{Languages \textnormal{\footnotesize \quad \textbf{-spoken and written-}}} 
-
-\raggedright
-\textbf{Arabic:} Fluent, \textbf{English:} Fluent, \textbf{French:} Intermediate \\ 
-% --- TECHNICAL SKILLS ---
-\resumesection{Technical Skills}
-
-\raggedright
-\textbf{Languages:}\\
-Python, Java, Kotlin, JavaScript, C++, HTML/CSS, SQL, Bash
-
-\textbf{Frameworks/Tools:}\\
-Spring Boot, React, Django, Ktor, FastAPI, JavaFX, Selenium, Jetpack Compose, PostgreSQL, MySQL, Docker, Git,
-Linux, Hugging Face, Hibernate, JPA, Figma, \LaTeX, Vim, JUnit, PyUnit, GitHub, Microsoft Project, 
-Microsoft 365 Suite
-
-\textbf{Concepts:}\\
-REST APIs, OOP, Concurrency programming, Data Structures \& Algorithms, Networking, UML, Agile method, 
-PEP8, Code Maintainability, Functional Programming
-
-% --- SELECTED PROJECTS ---
-\resumesection{Selected Projects}
-\begin{itemize}[leftmargin=*,label={}]
-    \resumesubentry{Greenhouse IoT Monitoring System}{
-      Developed an IoT platform using Spring Boot, React, Hibernate, PostgreSQL, and Arduino to 
-      monitor temperature, humidity, and light. Enabled real-time data tracking for greenhouse environments.
-    }
-
-    \resumesubentry{Online Voting Platform}{
-      Full-stack web app built with Django and PostgreSQL for secure user login, candidate management,
-       and vote recording with robust access control.
-    }
-
-    \resumesubentry{General purpose Image Classifier with Hugging Face}{
-      Used ResNet-50 to classify general images and deployed it with FastAPI to provide fast,
-       scalable image classification and packaged the model inference into a JavaFX GUI, enabling offline desktop predictions.
-    }
-
-    \resumesubentry{Python Automation Tool}{
-      Automated downloading and organizing of 116 files from structured web archives using Selenium.
-       Resolved race conditions and validated file completion integrity.
-    }
-
-    \resumesubentry{Data Visualization Suite}{
-      Analyzed datasets (U.S. baby names, movie ratings) using pandas, matplotlib, and Jupyter 
-      to build interactive and insightful data visualizations.
-    }
-\end{itemize}
-
-% --- EXPERIENCE ---
-\resumesection{Experience}
-\begin{itemize}[leftmargin=*,label={}]
-    \resumeentry{Android Developer Intern}{Jan 2024 -- Aug 2024}{Maduo Studio}{Dubai, UAE}
-    \begin{itemize}[leftmargin=1.5em]
-        \item Designed Android UI/UX with Kotlin and Jetpack Compose for a fitness app.
-        \item Built a juice customization feature enabling users to select ingredients prepared 
-        by the gym’s restaurant.
-    \end{itemize}
-
-    \resumeentry{Robotics Teacher \& Coach}{Jun 2024 -- Present}{AljazarieROBOTICS}{Constantine, Algeria}
-    \begin{itemize}[leftmargin=1.5em]
-        \item Delivered Python and robotics training to youth participants
-        \item organized and mentored teams for Codeavour Algeria 
-        \item supported AI/programming initiatives with the Ministry of Youth and Sport for their staff.
-    \end{itemize}
-
-    \resumeentry{Developer Member}{Jan 2024 -- Present}{Google Developers Group}{Constantine, Algeria}
-    \begin{itemize}[leftmargin=1.5em]
-        \item Developed and reviewed web authentication features; contributed to local developer training 
-        events.
-    \end{itemize}
-\end{itemize}
-
-% --- LEADERSHIP & ACTIVITIES ---
-\resumesection{Leadership \& Activities}
-\begin{itemize}[leftmargin=*,label={}]
-    \resumeentry{Hackathon Mentor}{Nov 2023}{DevFest Constantine}{Constantine, Algeria}
-    \begin{itemize}[leftmargin=1.5em]
-        \item Mentored 7–9 teams (28–35 participants) in fintech app design during the DevFest Hackathon.
-        \item Handled technical setup and event logistics. Despite last-minute sponsor withdrawal, 
-        ensured successful closing with gifts and certificates.
-    \end{itemize}
-
-    \resumeentry{Contributor}{Feb 2023 -- Sep 2023}{Mozilla Campus Club}{Constantine, Algeria}
-    \begin{itemize}[leftmargin=1.5em]
-        \item Worked on Android, AI/ML, and cybersecurity initiatives. 
-        Supported content creation and team collaboration.
-    \end{itemize}
-\end{itemize}
 
 % --- EDUCATION ---
 \resumesection{Education}
-\begin{itemize}[leftmargin=*,label={}]
-    \resumeentry{Bachelor's in Software Engineering}{Jun 2025}{University of Constantine 2}{Constantine, Algeria}
+\begin{itemize}
+    \resumeentry{University of Constantine 2}{2025 -- Present}{Master's in Software Engineering \& Intelligent Systems}{Constantine, Algeria}
+    \resumeentry{University of Constantine 2}{Jun 2025}{Bachelor's in Software Engineering}{Constantine, Algeria}
+\end{itemize}
+
+\resumesection{Languages}
+{\textbf{Arabic:} Native, \textbf{English:} Fluent, \textbf{French:} Intermediate}
+
+% --- EXPERIENCE ---
+\resumesection{Experience}
+\begin{itemize}
+    \resumeentry{Software Engineering Intern}{Mar 2026 -- May 2026}{SETRAM}{Constantine, Algeria}
+    \begin{itemize}[leftmargin=1.15em,label=\textbullet]
+        \item Deployed a document traceability platform in a finance department office, reducing workload by 85\%, eliminating manual checks entirely, and cutting information search time by 75\%.
+        \item Authored a report proposing a software migration/update plan, a risk mitigation strategy, and a PCC automation tool proposal.
+    \end{itemize}
+
+    \resumeentry{AI Research Intern}{Nov 2025}{CRBt -- Center of Biotechnology Research}{Constantine, Algeria}
+    \begin{itemize}[leftmargin=1.15em,label=\textbullet]
+        \item Built a two-stage Vision Transformer pipeline to detect and classify white blood cells into 18 classes, achieving up to 98\% accuracy on select classes.
+    \end{itemize}
+
+    \resumeentry{Android Developer Intern}{Jan 2024 -- Aug 2024}{Maduo Studio}{Dubai, UAE}
+    \begin{itemize}[leftmargin=1.15em,label=\textbullet]
+        \item Designed Android UI/UX with Kotlin and Jetpack Compose for a fitness app.
+        \item Built a juice customization feature enabling users to select ingredients prepared by the gym’s restaurant.
+    \end{itemize}
+
+    \resumeentry{Robotics Teacher \& Coach}{Jun 2024 -- Jun 2026}{AljazarieROBOTICS}{Constantine, Algeria}
+    \begin{itemize}[leftmargin=1.15em,label=\textbullet]
+        \item Delivered Python and robotics training to youth participants.
+        \item Organized and mentored national teams for Codeavour Algeria and led Algeria's delegation to I-Fest Tunisia 2026.
+        \item Supported AI/programming initiatives with the Ministry of Youth and Sport for their staff.
+    \end{itemize}
+
+    \resumeentry{Developer Member}{Jan 2024 -- Jun 2025}{Google Developers Group}{Constantine, Algeria}
+    \begin{itemize}[leftmargin=1.15em,label=\textbullet]
+        \item Developed and reviewed web authentication features; contributed to local developer training events.
+    \end{itemize}
+
+    \resumeentry{Hackathon Mentor}{Nov 2023}{DevFest Constantine}{Constantine, Algeria}
+    \begin{itemize}[leftmargin=1.15em,label=\textbullet]
+        \item Mentored 7–9 teams (28–35 participants) in fintech app design during the DevFest Hackathon.
+        \item Handled technical setup, guidance and support to participants and event logistics.
+    \end{itemize}
+
+    \resumeentry{Contributor}{Feb 2023 -- Sep 2023}{Mozilla Campus Club}{Constantine, Algeria}
+    \begin{itemize}[leftmargin=1.15em,label=\textbullet]
+        \item Worked on Android, AI/ML, and Networking initiatives. Supported content creation and team collaboration.
+    \end{itemize}
+\end{itemize}
+
+% --- SELECTED PROJECTS ---
+\resumesection{Selected Projects}
+\begin{itemize}
+    \resumesubentry{Multi-platform Car Marketplace (React Native)}{
+      Designed, built, and deployed a miltiplatforms production React Native car marketplace connecting Algerian customers with Chinese suppliers, now used by a real client.
+    }
+
+    \resumesubentry{Grep Clone -- Custom Regex Engine (Java)}{
+      Reimplemented grep from scratch, including a custom recursive-descent regex engine (quantifiers, groups, alternation, backreferences) built without Java's built-in regex library.
+    }
+
+    \resumesubentry{Git Clone -- Version Control Internals (C++)}{
+      Currently building a from-scratch, dependency-free reimplementation of core Git internals in C++.
+    }
+
+    \resumesubentry{Python Automation Tool}{
+      Automated downloading and organizing of 116 files from structured web archives using Selenium. Resolved race conditions and validated file completion integrity.
+    }
 \end{itemize}
 
 % --- ACHIEVEMENTS ---
 \resumesection{Achievements}
-\begin{itemize}[leftmargin=*,label={}]
-    \item Coached winning team to 2nd Place track 02 – Codeavour Qatar (Junior Division), 2025
-    \item Hackathon Mentor – DevFest Constantine, 2025
-    \item Taught 40+ students and mentored 100+ across national robotics and AI workshops
+{\textit
+Coached winning team to 2nd Place track 02 -- Codeavour Qatar (Junior Division), 2025\\
+Directed Codeavour Algeria 2026 national operations\\
+Mentored 2 of 5 winning teams (Track 1) -- Codeavour Jakarta (Global Finals), 2026\\
+Completed the Skyscanner Software Engineering Job Simulation (Forage)\\
+Taught 40+ students and mentored 100+ across national robotics and AI workshops
+}
+
+% --- TECHNICAL SKILLS ---
+\resumesection{Technical Skills}
+\begin{itemize}
+\item[] \textbf{Languages:} Python, Java, Kotlin, JavaScript, C++, HTML/CSS, SQL, Bash.
+\item[] \textbf{Frameworks/Tools:} Spring Boot, React, Django, Ktor, FastAPI, JavaFX, Selenium, Jetpack Compose, PostgreSQL, MySQL, Docker, Git, Linux, Hibernate, JPA, Figma, \LaTeX, Vim, JUnit, PyUnit, GitHub.
+\item[] \textbf{Concepts:} REST APIs, OOP, Concurrency programming, Data Structures \& Algorithms, Networking, UML, Agile method, PEP8, Code Maintainability.
 \end{itemize}
 
 \end{document}
